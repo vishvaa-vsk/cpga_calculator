@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.user-info {
+    margin: 20px 0;
+}
+
+.user-info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.performance-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.btn {
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+    background-color: #4CAF50; /* Green */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .btn:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }

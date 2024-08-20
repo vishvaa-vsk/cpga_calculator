@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Performance</title>
+    <link rel="stylesheet" href="../static/css/displayResults.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Academic Performance Report</h1>
+        </header>
+        
+        <section class="user-info">
+            <p><strong>Name:</strong> {{name}}</p>
+            <p><strong>Register No:</strong> {{regno}}</p>
+            <p><strong>Department:</strong> {{dept}}</p>
+            {% if arrears == [] %}
+                <p><strong>Arrears:</strong> None</p>
+            {% endif %}
+            <p><strong>Arrears:</strong> {{arrears}}</p>
+            
+        </section>
+
+        <section class="performance-table">
+            <h2>Semester Performance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>GPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in scores %}
+                    <tr>
+                        {% for key,value in data.items() %}
+                               {% if key.startswith("semester") %}
+                                <td>{{key|upper}}</td>
+                                <td>{{value}}</td>
+                               {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <thead>
+                    <tr>
+                        <th>Total CGPA</th>
+                        <th>{{cgpa}}</th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </div>
+
+    <a href="/" class="btn">Return to Home</a>
+</body>
+</html>

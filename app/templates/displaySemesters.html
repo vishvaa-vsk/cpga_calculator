@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Grades</title>
+    <link rel="stylesheet" href="../static/css/semesterStyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Semester Information</h1>
+        <div class="input-group">
+            <label for="numSemesters">Number of Semesters:</label>
+            <input type="number" id="numSemesters" name="numSemesters" min="1" max="8" onchange="createSemesterContainers()">
+        </div>
+        <div id="semesterContainers" class="semester-container"></div>
+        <button id="submit-btn" onclick="submitSemesterData()">Submit</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/sendSemGrades.js"></script>
+</body>
+</html>

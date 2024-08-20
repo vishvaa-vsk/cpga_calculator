@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body {
+    font-family: "Nanum Myeongjo", serif;
+    background-color: #F5F5F5; /* Cream */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.welcome-banner {
+    background-color: #87CEEB; /* Pale Blue */
+    color: #000000; /* Black for contrast */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 800px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+.container {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 400px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.form-container {
+    flex: 2;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select{
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #E5E5E5; /* Light Gray */
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+}
+
+input[type="text"], input[type="number"]  {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #E5E5E5; /* Light Gray */
+    border-radius: 8px;
+    font-size: 1em;
+    width: 94%;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    background-color: #FB9632; /* Soft Green */
+    color: #000000; /* Black for contrast */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #FE7C40; /* Slightly darker Soft Green */
+}
+
+.form-container input[type="text"], .form-container input[type="number"], .form-container select, .form-container input[type="submit"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+        max-width: 300px; /* Reduced max-width for smaller screens */
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input[type="text"], input[type="number"], select {
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+
+    input[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .form-container input[type="text"], .form-container input[type="number"], .form-container select, .form-container input[type="submit"] {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-banner {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .image-container {
+        max-width: 250px; /* Further reduced max-width */
+    }
+
+    .image-container img {
+        border-radius: 8px;
+    }
+
+    input[type="text"], input[type="number"], select {
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 0.8em;
+    }
+
+    input[type="submit"] {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}

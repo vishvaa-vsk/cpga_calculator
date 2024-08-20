@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Details</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <div class="welcome-banner">
+        <p>Welcome to BlockWizards GPA/CGPA Calculator</p>
+    </div>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="../static/images/home_banner.jpeg" alt="Placeholder Image">
+        </div>
+        <div class="form-container">
+            <h1>Enter Your Details</h1>
+            <form action="{{url_for('home')}}" method="post">
+                <input type="text" name="name" placeholder="Full Name" required autocomplete="off">
+                <input type="number" name="year" placeholder="Year (e.g., 2023)" required autocomplete="off">
+                <input type="number" name="regno" placeholder="Registration Number" required autocomplete="off">
+                <select name="department" required>
+                    <option disabled selected>Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="AI&DS">AI&DS</option>
+                    <option value="AUTO">AUTO</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="CSE(CS)">CSE(CS)</option>
+                    <option value="EEE">EEE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EIE">EIE</option>
+                    <option value="IT">IT</option>
+                    <option value="MECH">MECH</option>
+                    <option value="MBA">MBA</option>
+                </select>
+                <input type="submit" value="Proceed">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
